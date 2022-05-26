@@ -15,7 +15,7 @@
         "lib/me.js": "c42b54ad452f5b3b95cdb2e90c2d4852597e6116e5b3559b223e711779569d8f",
         "lib/party.js": "89c1ee86a5e7b2639c5c80cfa84676001ff21b62cb0e5ddc4959484e37bed947",
         "lib/talents.js": "971136057a314a4d62bf3c87e65b1c9aa3009aa1fb0ad3d33adaab0c672d7535",
-        "module.json": "d28e2127743776df7ff213614029ac9beb1bf9f5b7fdc3c864b98072cb980c4a"
+        "module.json": "f04102dd5f8f7c0de09dac0a113ab1b0e81ee851d3a21733478cba8871867e6b"
     },
     "defs": {
         "C_LOGIN_ARBITER": 2,
