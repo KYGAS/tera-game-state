@@ -19,7 +19,7 @@ class ClientMod {
                 this.users.set(result.attributes.id, result.attributes);
             });
 
-            if (mod.majorPatchVersion >= 105) {
+            if (mod.majorPatchVersion >= 99) {
                 // HeroData
                 (await mod.queryData('/HeroData/Template/', [], true, false, ['id', 'class', 'race', 'gender'])).forEach(result => {
                     this.users.set(result.attributes.id, result.attributes);
@@ -134,7 +134,7 @@ class NetworkMod extends EventEmitter {
             this.accountName = event.name;
         });
         
-        this.installHook('S_LOGIN_ACCOUNT_INFO', this.mod.majorPatchVersion >= 105 ? 3 : 2, event => {
+        this.installHook('S_LOGIN_ACCOUNT_INFO', this.mod.majorPatchVersion >= 100 ? 3 : 2, event => {
             this.accountId = event.accountId;
         });
 
@@ -145,7 +145,7 @@ class NetworkMod extends EventEmitter {
         this.installHook('S_SPAWN_ME', 'event', () => { this.setLoadingScreen(false); });
         this.installHook('S_EXIT', 'event', () => { this.setState(GameStates.INVALID); });
 
-        if (this.mod.majorPatchVersion >= 105) {
+        if (this.mod.majorPatchVersion >= 99) {
             this.installHook('S_SELECT_USER', 'event', () => { this.isTBA = false; });
             this.installHook('S_TBA_SELECT_USER', 'event', () => { this.isTBA = true; });
         }
